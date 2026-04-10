@@ -40,7 +40,7 @@ git remote add origin git@github.com:seuusuario/seurepositorio.git // associa da
 
 git push -u origin main
 
-git pull  // trás as novidades do github para minha maquina
+git pull  // git fetch + git merge. Ele baixa os dados e já tenta aplicar no seu código na hora.
 
 git clone URL // Baixa um projeto inteiro do GitHub para sua máquina.
 
@@ -67,6 +67,35 @@ git merge nomedaminhabranch
 
 Pegar nosso historico de versionamento e levar para um lugar remoto (nuvem)
 
-git fetch // synca todas as alterações que tem no repositorio remoto com as alterações que eu tenho no local
+git fetch // Baixa as novidades do servidor, mas não mexe no seu código atual. Ele apenas atualiza o histórico para você ver o que os outros fizeram.
 
+
+
+#### .gitignore #### 
+
+Nem tudo o que está na sua pasta deve ir para o GitHub. Arquivos de senha, 
+chaves de API, ou pastas gigantes de dependências (como node_modules no JS ou venv
+ no Python) devem ficar de fora.
+
+.env           # Ignora arquivos de senhas
+node_modules/  # Ignora pastas pesadas
+*.log          # Ignora qualquer arquivo que termine em .log
+
+
+1. Obter a URL do projeto
+Vá até a página do seu repositório no GitHub, clique no botão verde " Code" e copie o endereço (se configurou SSH como nas suas anotações, use a aba SSH; se não, use HTTPS).
+
+2. Trazer o projeto para o seu PC (Clone)
+Abra o terminal na pasta onde você organiza seus códigos e digite:
+git clone URL_QUE_VOCE_COPIOU
+
+O que o clone faz? Ele cria uma pasta com o nome do projeto, baixa todos os arquivos, todo o histórico de commits e já configura o remote origin automaticamente para você.
+
+3. Entrar na pasta
+cd nome-do-repositorio
+(Muitas pessoas esquecem esse passo e tentam rodar comandos do git fora da pasta do projeto).
+
+4. Sincronizar (Garantir que está na versão mais atual)
+Se você não mexe nesse projeto há algum tempo, pode ser que existam alterações no GitHub que não estão no seu PC. Por garantia, rode:
+git pull origin main
 
