@@ -59,3 +59,14 @@ git checkout main // volta para a branch
 
 git checkout medaminhabranch
 
+Mandar as alterações que fiz na minha branch separada para a branch principal
+
+git merge nomedaminhabranch 
+
+#### REPOSITÓRIOS REMOTOS ####
+
+Pegar nosso historico de versionamento e levar para um lugar remoto (nuvem)
+
+git fetch // synca todas as alterações que tem no repositorio remoto com as alterações que eu tenho no local
+
+
