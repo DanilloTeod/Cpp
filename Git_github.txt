@@ -1,0 +1,41 @@
+#### Baixar git ####
+
+
+git config --global user.name "Danillo Teodoro"
+
+git config --global user.email "EMAIL" email do github
+
+git config --list
+
+##### CONFIGURAR CHAVE SSH #####
+
+ssh é um protocolo para comunicação de dados com segurança
+A ideia básica é cadastrar previamente quais computadores podem acessar o Github em seu nome. Outros computadores não conseguem acessar
+
+(1) Gerar chave SSH no seu pc
+(2) Cadastrar a chave no github
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+ssh-keygen -t ed25519 -C "email"
+
+Salvo a chave no dir, entrar no arquivo .pub e colar o conteúdo no Github "SSH and GPG Keys"
+
+#### SALVAR A PRIMEIRA VERSÃO ####
+
+
+git init 
+
+git add .    // enviar arquivos do projeto para uma area STAGE
+
+git commit -m "Mensagem explicativa"
+
+git branch -M main
+
+git remote add origin git@github.com:seuusuario/seurepositorio.git
+
+git push -u origin main
+
+
+
+
