@@ -49,6 +49,34 @@ git clone URL_COPIADA
 cd nome-do-repositorio
 git pull origin main             # Baixa e aplica as mudanças da nuvem no seu PC
 
+O Git não olha para o seu computador como um todo; ele olha apenas para a pasta onde você está no terminal. O que identifica um projeto é a presença dessa pasta oculta que o comando git init ou git clone cria.
+
+Aqui está como funciona a "identidade" de cada projeto:
+
+3.1. A Pasta .git (O Cérebro do Projeto)
+Quando você entra em uma pasta pelo terminal e digita comandos do Git, ele procura imediatamente por uma pasta chamada .git.
+
+Se você estiver em Documents/Projeto_A, o Git lerá as configurações dentro de Projeto_A/.git.
+
+Se você mudar para Documents/Projeto_B, o Git lerá o arquivo .git de lá.
+
+Cada pasta .git contém:
+
+A URL do GitHub para onde aquele projeto deve ser enviado (o remote origin).
+
+O Histórico de Commits exclusivo daquele projeto.
+
+As Branches daquele projeto.
+
+3.2. O Arquivo de Configuração (config)
+Dentro dessa pasta invisível, existe um arquivo chamado config. Se você quiser "bisbilhotar" como o Git sabe para onde enviar os arquivos, você pode rodar este comando dentro de qualquer projeto:
+
+Bash
+cat .git/config
+Lá você verá algo como:
+url = git@github.com:seu-usuario/projeto-especifico.git
+
+É por isso que, se você der um git push na Pasta A, o código nunca vai parar no repositório da Pasta B. O Git sabe que "quem manda" naquela pasta é o arquivo de configuração que está ali dentro.
 
 4. O Dia a Dia: Branches e Colaboração
 
