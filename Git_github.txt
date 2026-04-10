@@ -26,16 +26,36 @@ Salvo a chave no dir, entrar no arquivo .pub e colar o conteúdo no Github "SSH 
 
 git init 
 
-git add .    // enviar arquivos do projeto para uma area STAGE
+git add .    // enviar arquivos do projeto para uma area STAGE 
 
-git commit -m "Mensagem explicativa"
+git status // VER O STAGE
 
-git branch -M main
+git commit -m "Mensagem explicativa" // salva a versão
 
-git remote add origin git@github.com:seuusuario/seurepositorio.git
+git branch -M main // salva histórico de commit
+
+// deve-se criar um projeto no github
+
+git remote add origin git@github.com:seuusuario/seurepositorio.git // associa dados local no github
 
 git push -u origin main
 
+git pull  // trás as novidades do github para minha maquina
 
+git clone URL // Baixa um projeto inteiro do GitHub para sua máquina.
 
+git log // Exibe o histórico de todos os commits realizados.
+
+git diff // Mostra as diferenças entre o arquivo que eu tenho e o último commit
+// para sair apertar "q"
+
+git restore nomedoarquivo // voltar para a última versão
+
+git branch // mostra a branch que estou atualmente
+
+git checkout -b nomedaminhabranch // saindo da branch que estou atualmente, cria outra e jogando todas as alterações para a nova branch 
+
+git checkout main // volta para a branch
+
+git checkout medaminhabranch
 
