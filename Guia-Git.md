@@ -61,6 +61,14 @@ git checkout main                   # Volta para a branch principal
 git checkout main
 git merge nome-da-branch
 
+git ls-tree -r main --name-only
+#-r: Lista de forma recursiva (dentro de todas as pastas).
+
+#main: É o nome da sua branch principal (mude para master se o seu projeto for antigo).
+
+#--name-only: Mostra apenas os nomes dos arquivos, sem os códigos técnicos do Git.
+
+
 5. Inspeção e Organização
 
 git log: Exibe o histórico de todos os commits.
