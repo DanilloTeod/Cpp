@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> // input e output
 
 
 int main () {
