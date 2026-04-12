@@ -1,0 +1,58 @@
+sudo apt update
+sudo apt upgrade
+
+
+Instalando o ZSH
+sudo apt install zsh
+
+chsh -s $(which zsh) // deve-se reiniciar o pc
+
+# pacotes necessarios
+sudo apt install curl git
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+Plugins do ZSH
+
+# Instalar znit
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+# abrir o arquivo de configurações o zsh
+code ~/.zshrc
+
+# adicione no final do .zshrc
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+
+
+Fontes
+
+# criando diretório
+mkdir ~/.fonts
+
+# baixando fonte
+wget -P ~/.fonts 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/BitstreamVeraSansMono.zip' 
+
+unzip ~/.fonts/BitstreamVeraSansMono.zip -d ~/.fonts
+
+
+
+Fira Code 
+sudo apt install fonts-firacode
+// fechar e abrir o terminal, configurar a fonte no terminal manualmente 
+
+
+Instalando o tema Powerlevel10k
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+
+# abrir o arquivo de configurações o zsh
+code ~/.zshrc
+
+# alterar o valor do tema
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+
+p10k configure //sempre que precisar configurar
