@@ -3,7 +3,11 @@
 
 int main () {
 
-    printf("Test\n");
+    /*
+        \t tab
+        \n new line
+    */
+    printf("Test\t tab\n");
 
     return 0;
 }
